@@ -2,6 +2,14 @@ Estrutura Geral do Código
 No início do código, temos as diretivas %standalone e %unicode, que indicam que o analisador será autônomo e suportará caracteres Unicode.
 
 
+Macros
+Eu coloquei macros por dica de videos e sites sobre esses codigos
+digito = [0-9]: representa qualquer dígito de 0 a 9.
+dia = (0[1-9]|[12][0-9]|3[01]): representa um dia válido do mês.
+mes = (0[1-9]|1[0-2]): representa um mês válido.
+ano = [0-9]{4}: representa um ano com 4 dígitos.
+
+
 Padrões
 Cada padrão é definido por uma expressão regular, e quando encontrado, o analisador executa uma ação, geralmente imprimindo uma mensagem no console e retornando um objeto normalmente chamado de "token"
 
