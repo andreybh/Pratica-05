@@ -1,9 +1,9 @@
 Estrutura Geral do Código
-No início do código, temos as diretivas %standalone e %unicode, que indicam que o analisador será autônomo e suportará caracteres Unicode.
+No início do código, tem as diretivas %standalone e %unicode, que mostram que o analisador é autônomo e conseguira usar caracteres Unicode.
 
 
 Macros
-Eu coloquei macros por dica de videos e sites sobre esses codigos
+Eu coloquei macros para cada tipo de conjunto de numeros usados por dica de videos e sites sobre codigos de analisadores léxicos
 digito = [0-9]: representa qualquer dígito de 0 a 9.
 dia = (0[1-9]|[12][0-9]|3[01]): representa um dia válido do mês.
 mes = (0[1-9]|1[0-2]): representa um mês válido.
