@@ -1,0 +1,30 @@
+Estrutura Geral do Código
+No início do código, temos as diretivas %standalone e %unicode, que indicam que o analisador será autônomo e suportará caracteres Unicode.
+
+
+Padrões
+Cada padrão é definido por uma expressão regular, e quando encontrado, o analisador executa uma ação, geralmente imprimindo uma mensagem no console e retornando um objeto normalmente chamado de "token"
+
+Padrão de Data
+{dia}/{mes}/{ano}
+Imprime a data encontrada e retorna um token do tipo "DATA".
+
+Padrão de Hora
+([01][0-9]|2[0-3]):[0-5][0-9]
+Imprime a hora encontrada e retorna um token do tipo "HORA".
+
+Padrão de Telefone
+[0-9]{2}\+[\s]*\([0-9]{3}\)[\s]*[0-9][\s]*[0-9]{4}-[0-9]{4}
+Reconhece números de telefone com código de país, imprime a mensagem e retorna um token do tipo "TELEFONE".
+
+Padrão de CPF
+[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}
+Imprime o CPF reconhecido e retorna um token do tipo "CPF".
+
+Padrão de E-mail
+[\w.-]+@[\w.-]+\.[a-zA-Z]{2,}
+Reconhece endereços de e-mail válidos, imprime uma mensagem e retorna um token do tipo "EMAIL".
+
+Padrão de URL
+https?://[\w.-]+(?:/[\w.-]*)*
+Reconhece URLs com ou sem caminho adicional, imprime e retorna um token do tipo "URL".
